@@ -1,0 +1,34 @@
+<%- include badHeader %>
+  <script type="text/javascript">
+     $(document).ready(function() {
+          $(".left ul li:eq(8)").css("color","#FFF");
+          $(".left ul li:eq(8)").css("background-color","#B78DE7");
+          $(".left ul").find('li:eq(8)').children(".trig").css('display', 'block');
+          $(".data input").attr('disabled', 'true');
+          $(".inputBtn").click(function() {
+             $(".data input").removeAttr('disabled');
+          });
+          $(".noadd_btn").click(function() {
+            $(".data input").attr('disabled', 'true');
+          });
+     });
+  </script>
+<%- include badLeftBar %>
+        <div class="ad_data">
+                <input class="inputBtn" style="width:100px;height:34px;margin:0px 0px 20px 150px;font-size:16px"
+                type="button" value="修改资料" />
+               <div class="data data_1"><label style="color:red">原密码必填。不修改密码时，新密码、确认密码留空</label></div>
+               <div class="data"><label>原密码</label><input type="password" /></div>
+               <div class="data"><label>新密码</label><input type="password"/></div>
+               <div class="data"><label>确认新密码</label><input type="password"/></div>
+               <div class="data"><label>电话</label><input value="18823456543" /></div>
+               <div class="data"><label>邮箱</label><input type="email" value="18823456@qq.com"/></div>
+               <div class="add_btn">提交修改</div>
+                <div class="noadd_btn">取消</div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+   </div>
+</body>
+</html>

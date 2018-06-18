@@ -1,0 +1,55 @@
+<%- include badHeader %>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".left ul li:eq(2)").css("color", "#FFF");
+      $(".left ul li:eq(2)").css("background-color", "#B78DE7");
+      $(".left ul").find('li:eq(2)').children(".trig").css('display', 'block');
+      // $(".data input").attr('disabled', 'true');
+      $(".data input").eq(0).removeAttr('disabled');//不可输入
+    });
+  </script>
+  <%- include badLeftBar %>
+    <form action="/badModifyReader" method="POST" class="ad_data">
+
+      <div class="data">
+        <label>借阅号</label>
+        <input type="text" placeholder="输入要修改的学号" name="UserId" />
+      </div>
+      <div class="data">
+        <label>用户名</label>
+        <input type="text" placeholder="输入修改后姓名" name="UserName" />
+      </div>
+      <div class="data">
+        <label>学院</label>
+        <input type="text" placeholder="输入修改后学院" name="Departments" />
+      </div>
+      <div class="data">
+        <label>专业</label>
+        <input type="text" placeholder="输入修改后专业" name="Major" />
+      </div>
+      <div class="data">
+        <label>电话</label>
+        <input type="text" placeholder="输入修改后电话" name="Phone" />
+      </div>
+      <div class="data">
+        <label>邮箱</label>
+        <input type="text" placeholder="输入修改后邮箱" name="Email" />
+      </div>
+      <div class="data">
+        <label>借阅上限</label>
+        <input type="text" placeholder="输入修改后上限" name="Max" />
+      </div>
+      <div class="data">
+        <label>借阅期限</label>
+        <input type="text" placeholder="输入修改后期限" name="Time" />
+      </div>
+      <input class="add_btn" type="submit" value="确认修改" />
+    </form>
+
+    </div>
+    <div class="clear"></div>
+    </div>
+    </div>
+    </body>
+
+    </html>

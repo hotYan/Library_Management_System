@@ -1,0 +1,23 @@
+<%- include header %>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/readerAlterData.css">
+	<script type="text/javascript">
+		$(function () {
+			var Lis = $(".menu ul li").eq(1);
+			Lis.css('border-bottom', '7px solid #419EDC');
+			Lis.css('margin-top', '-7px');
+			Lis.css('color', '#419EDC');
+		})
+	</script>
+	<%- include TopBar %>
+		<form class="content" action="/ModifyInformation" method="POST">
+			<div class="data">
+				<label>电话</label>
+				<input placeholder="输入新电话号码" name="Phone"/>
+			</div>
+			<div class="data">
+				<label>邮箱</label>
+				<input placeholder="输入新邮箱" name="Email" />
+			</div>
+			<button class="add_btn" type="submit">确认修改</button>
+		</form>
+		<%- include footer %>

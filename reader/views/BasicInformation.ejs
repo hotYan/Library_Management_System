@@ -1,0 +1,70 @@
+<%- include header %>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/readerPersonal.css">
+    <script type="text/javascript">
+        $(function () {
+            var Lis = $(".menu ul li").eq(0);
+            Lis.css('border-bottom', '7px solid #419EDC');
+            Lis.css('margin-top', '-7px');
+            Lis.css('color', '#419EDC');
+        })
+    </script>
+    <%- include TopBar %>
+
+        <div class="content">
+
+            <div class="data">
+                <label>借阅号</label>
+                <div>
+                    <%= datas[0].UserId %>
+                </div>
+            </div>
+            <div class="data">
+                <label>用户名</label>
+                <div>
+                    <%= datas[0].UserName %>
+                </div>
+            </div>
+            <div class="data">
+                <label>学院</label>
+                <div>
+                    <%= datas[0].Departments %>
+                </div>
+            </div>
+            <div class="data">
+                <label>专业</label>
+                <div>
+                    <%= datas[0].Major %>
+                </div>
+            </div>
+            <div class="data">
+                <label>电话</label>
+                <div>
+                    <%= datas[0].Phone %>
+                </div>
+            </div>
+            <div class="data">
+                <label>邮箱</label>
+                <div>
+                    <%= datas[0].Email %>
+                </div>
+            </div>
+            <div class="data">
+                <label>借阅上限</label>
+                <div>
+                    <%= datas[0].Max %>
+                </div>
+            </div>
+            <div class="data">
+                <label>借阅期限</label>
+                <div>
+                    <%= datas[0].Time %>
+                </div>
+            </div>
+            <div class="data">
+                <label>已借数量</label>
+                <div>
+                    <%= datas[0].LendedNum %>
+                </div>
+            </div>
+        </div>
+        <%- include footer %>

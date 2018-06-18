@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		body {
+			background-color: azure;
+		}
+
+		div.reg {
+			height: 250px;
+			width: 240px;
+			border: 1px gray solid;
+			background: azure;
+			padding: 10px 40px;
+			margin: 0 auto;
+			border-radius: 10px;
+			margin-top: 150px;
+
+		}
+
+		span.login {
+			display: block;
+			margin-left: 80px;
+		}
+
+		input.input {
+			height: 30px;
+			width: 200px;
+			margin: 10px;
+		}
+
+		button {
+			display: block;
+			height: 30px;
+			width: 80px;
+			margin-left: 80px;
+			margin-top: 30px;
+			font-size: 16px;
+			border-radius: 5px;
+			background-color: rgb(148, 181, 241);
+			color: white;
+		}
+
+		div.bar {
+			height: 60px;
+			width: 100%;
+			background-color: wheat;
+
+		}
+
+		a {
+			text-decoration: none;
+			/* background-color: black; */
+			padding: 10px;
+			position: absolute;
+			top: 18px;
+			color: black;
+			font-size: 20px;
+
+
+		}
+
+		.tip {
+			color: #f00;
+			font-size: 10px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="bar">
+		<a href="/">首页</a>
+	</div>
+	<div class="reg">
+		<form action="/adminlogin" method="post">
+				<% if(errmsg){ %>
+					<p class="tip">*<%= errmsg %></p>
+					<% } %>
+			<span class="login">图书管理员登录</span>
+			<input id="txtUserName" name="UserId" class="input" placeholder="输入图书管理员编号" type="text" />
+			<input id="txtUserPwd" name="Password" class="input" placeholder="输入密码" type="password" />
+			<input style="margin-left:10px;" type="checkbox" />
+			<span style="font-size:12px;">两天免登录</span>
+			<button type="submit">登录</button>
+
+		</form>
+
+	</div>
+
+</body>
+
+</html>
